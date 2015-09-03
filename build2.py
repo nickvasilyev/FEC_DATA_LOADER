@@ -16,7 +16,8 @@ http://www.fec.gov/finance/disclosure/ftpdet.shtml
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 BASEURL = 'ftp://ftp.fec.gov/FEC/{}/{}'
 HEADER_BASEURL='http://www.fec.gov/finance/disclosure/metadata/{}'
-
+ELASTIC = 'http://localhost:9200'
+index = True
 TYPES = {'ccl': {'args': {},
                 'unique': 'LINKAGE_ID'},
          'cm': {'args': {},
@@ -35,8 +36,7 @@ DMAP = {
     'CMTE_ID': {'d': 'cm'},
     'CAND_ID': {'d': 'cn'}
     }
-#         'oth':{'args': {},
-#                'unique': 'TRAN_ID'}
+
 DATA_DIR=SCRIPT_DIR+os.sep+'data'
 YEAR = sys.argv[1] if len(sys.argv)>1 else '2016'
 YR = YEAR[-2:]
