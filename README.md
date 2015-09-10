@@ -1,7 +1,9 @@
 #Fec Data Loader
 Here is a bit of code I wrote to download data from FEC, de-normalize and de-code it and index it into elastic search for viewing in kibana. 
 You can also use the output csv files in pandas without having to do any joins on the data. Note that this is pretty quick and dirty. 
- 
+
+Check out the first analysis here: http://tinyurl.com/nkuwu55
+
 ##How to use this:
      1. Download the code
      2. Run build2.py
