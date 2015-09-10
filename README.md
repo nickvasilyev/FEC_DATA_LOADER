@@ -31,4 +31,8 @@ Make sure you have succesfully ran the buil2 script before running this.
  By default this will point to local instance of elastic search. If you want to send this data somewhere else just edit ES_HOST parameter in the script.
 
 ##Notes:
-There are some inconsistencies with a few values in FEC data translation. The script will print these out to the screen, but due to a relatively low number of them I generally disregard them. 
+There are some inconsistencies with a few values in FEC data translation. The script will print these out to the screen, but due to a relatively low number of them I generally disregard them.
+ 
+ #Legal
+ I am not sure how to write legal stuff; but I am not responsible for how you use this. In fact it's probably wrong, I may or may not have been drinking beer when I wrote this. 
+ Definitely wrote it on my own time though... as far as I can remember. 

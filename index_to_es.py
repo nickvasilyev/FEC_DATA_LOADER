@@ -85,7 +85,7 @@ STRING_FIELDS = ['CMTE_TP',
 
 def process_file(doc_type, fname):
     print("Opening: " + fname)
-    with open(DATA_DIR + os.sep + fname, 'r') as f:
+    with open(fname, 'r') as f:
         reader = csv.DictReader(f)
         first = True
         for i, row in enumerate(reader):
@@ -163,12 +163,12 @@ def create_num_field(doc_type, field):
 if __name__ == '__main__':
     FILES = {
         'indiv': '_indiv{}.csv'.format(YR),
-        'pas': '_pas2{}.csv'.format(YR),
-        'exp': '_exp{}.csv'.format(YR)
+       # 'pas': '_pas2{}.csv'.format(YR),
+       # 'exp': '_exp{}.csv'.format(YR)
     }
     for file in FILES.keys():
-        if os.path.isfile(file):
-            process_file(file, FILES[file])
+        if os.path.isfile(DATA_DIR + os.sep + FILES[file]):
+            process_file(file, DATA_DIR + os.sep + FILES[file])
         else:
-            print("ERROR: Can't find file {}".format(file))
+            print("ERROR: Can't find file {}".format(DATA_DIR + os.sep + FILES[file]))
 

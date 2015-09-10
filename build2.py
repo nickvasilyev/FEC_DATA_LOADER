@@ -109,7 +109,6 @@ def get_other_data(field_n, field_v, dmap=DMAP, data=data):
         return data[where_in_data][field_v]
     except KeyError as e:
         print("WARN: Failed to perform a look up on: [{}] by [{}]".format(field_v, field_n))
-        raise e
 
 
 def get_cols(iter, count=1000):
